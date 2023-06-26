@@ -158,9 +158,9 @@ document.querySelector("#telefonoUsuario").innerHTML = (telefonoUsuario);
 
 //-----------DATOS TABLA PRODUCTOS----------------------
 const canProducto = parametrosURL.get('canProducto');
-const codigoProducto = parametrosURL.get('codigoProducto');
 const Producto = parametrosURL.get('Producto');
 const productoDetalle = parametrosURL.get('productoDetalle');
+const serialNumero = parametrosURL.get('serialNumero');
 const precioUnitario = parametrosURL.get('precioUnitario');
 const precioTotal = parametrosURL.get('precioTotal');
 /*FUNCION PARA UNIR ARRAYS*/
@@ -176,13 +176,13 @@ function arrayProductos(datos1, datos2, datos3, datos4, datos5, datos6) {
 }
 //Convertimos en array cantidad, item, precio
 const cantidadProducto = canProducto.split(" , ");
-const codProducto = codigoProducto.split(" , ");
 const nombreProducto = Producto.split(" , ");
 const detalleProducto = productoDetalle.split(" , ");
+const serial = serialNumero.split(" , ");
 const precioU = precioUnitario.split(" , ");
 const precioT = precioTotal.split(" , ");
 
-const ventas = arrayProductos(cantidadProducto, codProducto, nombreProducto, detalleProducto, precioU, precioT);
+const ventas = arrayProductos(cantidadProducto, nombreProducto, detalleProducto, serial, precioU, precioT);
 
 /* Mostrando parametros en mi HTML */
 /* URL YOUTUBE https://www.youtube.com/watch?v=dDy2krKujCY
